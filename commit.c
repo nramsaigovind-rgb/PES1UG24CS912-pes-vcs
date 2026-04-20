@@ -132,7 +132,7 @@ int head_read(ObjectID *id_out) {
     char line[512];
     if (!fgets(line, sizeof(line), f)) { fclose(f); return -1; }
     fclose(f);
-    line[strcspn(line, "\r\n")] = '\0'; // strip newline
+    line[strcspn(line, "\r\n)] = '\0'; // strip newline
 
     char ref_path[512];
     if (strncmp(line, "ref: ", 5) == 0) {
